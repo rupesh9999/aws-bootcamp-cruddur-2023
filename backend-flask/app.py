@@ -34,6 +34,10 @@ def data_message_groups():
   else:
     return model['data'], 200
 
+@app.route("/", methods=['GET'])
+def home():
+    return "Welcome to the API!", 200
+
 @app.route("/api/messages/@<string:handle>", methods=['GET'])
 def data_messages(handle):
   user_sender_handle = 'andrewbrown'
